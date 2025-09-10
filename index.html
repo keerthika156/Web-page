@@ -1,7 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Online Course Enrollment</title>
+  <meta charset="UTF-8">
+  <title>My Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f0f0f0; color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: #4CAF50;
+      color: white; text-align: center;
+      padding: 15px;
+    }
+    nav {
+      background: #333; padding: 10px;
+      display: flex; justify-content: center;
+    }
+    nav a {
+      color: white; text-decoration: none;
+      margin: 0 15px; font-weight: bold;
+    }
+    nav a:hover { color: #4CAF50; }
+    main {
+      padding: 20px; max-width: 800px;
+      margin: auto;
+    }
+    .card {
+      background: white; padding: 20px;
+      margin: 15px 0; border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 8px 12px; border: none;
+      background: #4CAF50; color: white;
+      border-radius: 5px; cursor: pointer;
+    }
+    button:hover { background: #45a049; }
+    footer {
+      text-align: center; padding: 15px;
+      background: #333; color: white;
+      margin-top: 20px;
+    }
+    /* Dark mode */
+    .dark { background: #222; color: #eee; }
+    .dark header, .dark footer { background: #111; }
+    .dark nav { background: #111; }
+    .dark .card { background: #333; color: #eee; }
+  </style>
 </head>
-  <href a src="file:///C:/Users/Srinu/.vscode/HTML/project%2016.html">
-  </html>
+<body>
+  <header>
+    <h1>Welcome to My Web Page</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <div class="card">
+      <h2>Hello!</h2>
+      <p>This is a simple web page built using <b>HTML, CSS, and JavaScript</b>.</p>
+      <button onclick="showMessage()">Click Me</button>
+      <p id="message"></p>
+    </div>
+
+    <div class="card">
+      <h2>Dark Mode</h2>
+      <p>Click the button to toggle between light and dark themes.</p>
+      <button onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 My Web Page</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      document.getElementById('message').textContent = "Thanks for clicking! 🎉";
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
