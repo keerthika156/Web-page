@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Simple Web App</title>
+   <title>Multimedia Demo</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
-    h1 { color: #333; }
-    #todo-container { max-width: 400px; margin: auto; }
-    input, button { padding: 8px; }
-    ul { list-style: none; padding: 0; }
-    li { background: #fff; margin: 5px 0; padding: 8px; border-radius: 5px; display: flex; justify-content: space-between; }
-    button { cursor: pointer; }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+    video, audio {
+      margin: 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
-  <div id="todo-container">
-    <h1>To-Do List</h1>
-    <input id="todo-input" type="text" placeholder="Enter a task">
-    <button onclick="addTodo()">Add</button>
-    <ul id="todo-list"></ul>
-  </div>
 
-  <script>
-    function addTodo() {
-      const input = document.getElementById('todo-input');
-      const text = input.value.trim();
-      if (!text) return;
+  <h1>Multimedia Demo Page</h1>
 
-      const li = document.createElement('li');
-      li.textContent = text;
+  <h2>Sample Video</h2>
+  <video width="640" height="360" controls>
+    <source src="C:\Users\Srinu\Videos\Screen Recordings\Screen Recording 2025-07-15 105711.mp4">
+    Your browser does not support the video tag.
+  </video>
+ <h2>Sample Audio</h2>
+  <audio controls>
+    <source src="C:\Users\Srinu\Music\Audio\Audio\Amma Ani Kothaga - SenSongsmp3.Co.mp3">
+    Your browser does not support the audio element.
+  </audio>
 
-      const delBtn = document.createElement('button');
-      delBtn.textContent = '✖';
-      delBtn.onclick = () => li.remove();
-
-      li.appendChild(delBtn);
-      document.getElementById('todo-list').appendChild(li);
-
-      input.value = '';
-    }
-  </script>
 </body>
 </html>
+
+
